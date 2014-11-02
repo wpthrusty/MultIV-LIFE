@@ -1,10 +1,15 @@
 MultiIV Life readme file
 ============
-
+Description
+==
 This is a MultiIV-Life Server file for MultiIV Mod
 
-MultiIV Life Server System Progress
+Credit
+==
+Rusty (Coder)
 
+MultiIV Life Server System Progress
+==
 Player Profile Database (Level,Job,AdminLevel,Money,etc.)
 
 Bank System (ATM,Tax,Hack)

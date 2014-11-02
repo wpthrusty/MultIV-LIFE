@@ -10,7 +10,7 @@
 			"type": "server"
 		},
 		{
-			"filepath": "life.mysqlfunc.nut",
+			"filepath": "main.life.mysqlfunc.nut",
 			"type": "server"
 		},
 		{

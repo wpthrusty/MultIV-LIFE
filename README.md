@@ -4,6 +4,8 @@ Description
 ==
 This is a MultiIV-Life Server file for MultiIV Mod
 
+MultiIV Life is a opensource!!!  :D
+
 Credit
 ==
 Rusty (Coder)

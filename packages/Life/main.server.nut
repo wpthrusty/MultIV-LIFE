@@ -1,14 +1,13 @@
-local playerVehicles = {};
+//MultiIV Life Main Server Function
+print("MultiIV Life : Main Server Function Load...");
 
+local playerVehicles = {};
 // Player connect event
 
 function OnPlayerConnect(player)
 {
 	//In coming connected player message
-	player.BroadcastMessage("#ffffff" + player.GetName() + " has join the game ");
-	player.SendMessage("#ffffff" + "Hi " + player.GetName() + " welcome to MultiIV Life Server");
-	player.SendMessage("This is a Life Server Tested Version 1.0");
-	player.SendMessage("Author : Rusty @ Wolf Pack of Thailand Team");
+	player.BroadcastMessage("#ffffff" + player.GetName() + " has connect to server");
 }
 
 Event.Add(Player, "connect", OnPlayerConnect);
@@ -24,6 +23,10 @@ function OnPlayerInGame(player)
 	player.SetSpawnHeading(102.232361);
 	player.Spawn(-229.635574, 431.741943, 14.742328, 102.232361);
 
+	//Show Welcome Message
+	player.SendMessage("#ffffff" + "Hi " + player.GetName() + " welcome to MultiIV Life Server");
+	player.SendMessage("This is a Life Server Tested Version 1.0");
+	player.SendMessage("Author : Rusty @ Wolf Pack of Thailand Team");
 	// Show available commands to the player
 	player.SendMessage("#00ff00COMMANDS: #ffffff/vehicle, /weapon, /kill");
 }
@@ -51,7 +54,10 @@ Event.Add(Player, "disconnect", OnPlayerDisconnect);
 
 function OnPlayerDeath(player)
 {
-	Player.BroadcastMessage("#ff0000" + player.GetName() + " has died");
+	if (Life_DeathMSG)
+	{
+		Player.BroadcastMessage("#ff0000" + player.GetName() + " has died");
+	}
 }
 
 Event.Add(Player, "death", OnPlayerDeath);
@@ -132,3 +138,7 @@ function KillCommand(player, command, ...)
 
 Command.Add("kill", KillCommand);
 Command.Add("k", KillCommand);
+
+
+
+print("MultiIV Life : Main Server Function Loaded success");

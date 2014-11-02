@@ -9,6 +9,10 @@
 			"filepath": "main.server.conf.nut",
 			"type": "server"
 		},
+		{
+			"filepath": "server.event.nut",
+			"type": "server"
+		},
         {
             "filepath": "main.client.nut",
             "type": "client"

@@ -10,6 +10,10 @@
 			"type": "server"
 		},
 		{
+			"filepath": "life.mysqlfunc.nut",
+			"type": "server"
+		},
+		{
 			"filepath": "server.event.nut",
 			"type": "server"
 		},

@@ -1,0 +1,19 @@
+{
+	"language": "squirrel",
+    "scripts": [
+        {
+            "filepath": "main.server.nut",
+            "type": "server"
+        },
+        {
+            "filepath": "main.client.nut",
+            "type": "client"
+        }
+    ],
+    "assets": [
+        {
+            "filepath": "trollface.png",
+            "type": "client"
+        }
+    ]
+}

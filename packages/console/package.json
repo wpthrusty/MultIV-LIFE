@@ -1,0 +1,9 @@
+{
+	"language": "squirrel",
+    "scripts": [
+        {
+            "filepath": "console.nut",
+            "type": "server"
+        }
+        ]
+}

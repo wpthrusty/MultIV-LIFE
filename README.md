@@ -10,6 +10,9 @@ Credit
 ==
 Rusty (Coder)
 
+Chris (MySql Module for MultiIV)
+https://github.com/christopherftw09 
+
 MultiIV Life Server System Progress
 ==
 MySQL Database Support

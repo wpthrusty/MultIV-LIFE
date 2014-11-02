@@ -10,6 +10,8 @@ Rusty (Coder)
 
 MultiIV Life Server System Progress
 ==
+MySQL Database Support
+
 Player Profile Database (Level,Job,AdminLevel,Money,etc.)
 
 Bank System (ATM,Tax,Hack)

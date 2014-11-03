@@ -23,6 +23,10 @@
         }
     ],
     "assets": [
+		{
+			"filepath": "multIV_life_logo.png",
+			"type": "client"
+		},
         {
             "filepath": "trollface.png",
             "type": "client"

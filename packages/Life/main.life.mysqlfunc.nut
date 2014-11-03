@@ -17,9 +17,13 @@ function LifeMySqlPing()
 }
 LifeMySqlPing();
 
-function LifeCreateData(pName)
+function LifeCreatePlayerData(pName)
 {
-	mysql.query(Life_MySQL, "");
+	local query = "INSERT INTO players (name) VALUES ('" + pName + "')";
+	local handle = mysql.query(Life_MySQL, query);
+    mysql.store_result(handle);
+    mysql.fetch_row(handle);
+    mysql.free_result(handle);
 }
 
 function LifeGetData(pIDS)
@@ -27,9 +31,9 @@ function LifeGetData(pIDS)
 	mysql.query(Life_MySQL, "SELECT * FORM players WHERE ids ='" + pIDS + "'");
 }
 
-function LifeSaveData(pIDS, pMoney)
+function LifeSavePlayerData(pIDS, pMoney)
 {
-	local query = "UPDATE money = '" + pMoney +"' WHERE ids = '" + pIDS + "'";
+	local query = "UPDATE players SET money = '" + pMoney + "' WHERE ids = '" + pIDS + "'";
 	local handle = mysql.query(Life_MySQL, query);
     mysql.store_result(handle);
     mysql.fetch_row(handle);

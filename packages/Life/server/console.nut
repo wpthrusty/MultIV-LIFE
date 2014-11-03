@@ -6,7 +6,7 @@ Command.AddConsole("help",
 	function (command)
 	{
 		print("MultIV Life Console Command List");
-		print("help , say <message>, ");
+		print("help , say <message>, setmoney <playerid> <amoung>");
 		print("================================");
 	}
 );
@@ -24,6 +24,22 @@ Command.AddConsole("say",
 		else
 		{
 			print("Syntax: say <message>");
+		}
+	}
+);
+
+Command.AddConsole("setmoney",
+	function (command, command, ...)
+	{
+		local money = implode(vargv);
+		local CID = implode(vargv);
+		if (money.int() > 0 && CID.int() >= 0)
+		{
+			print(Life_BCName + ": SetPlayerData (ID: " + CID + ") Amount : " + money);
+		}
+		else
+		{
+			print("Syntax: setmoney <playerid> <amoung>");
 		}
 	}
 );

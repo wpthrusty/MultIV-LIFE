@@ -1,6 +1,14 @@
 {
 	"language": "squirrel",
     "scripts": [
+		{
+			"filepath": "../../Cfg/server.conf.nut",
+			"type": "server"
+		},
+		{
+			"filepath": "../../Cfg/mysql.conf.nut",
+			"type": "server"
+		},
         {
             "filepath": "main.server.nut",
             "type": "server"
@@ -11,14 +19,6 @@
 		},
 		{
 			"filepath": "server.event.nut",
-			"type": "server"
-		},
-		{
-			"filepath": "/config/server.conf.nut",
-			"type": "server"
-		},
-		{
-			"filepath": "/config/mysql.conf.nut",
 			"type": "server"
 		},
         {

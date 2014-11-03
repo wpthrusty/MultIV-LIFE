@@ -15,3 +15,23 @@ function LifeMySqlPing()
 	}
 }
 LifeMySqlPing();
+
+function LifeGetData(pName)
+{
+
+}
+
+function LifeSaveData(pName)
+{
+
+}
+
+function LifeUpdateData(x)
+{
+
+}
+
+function LifeDeleteData(pName)
+{
+
+}

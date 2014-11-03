@@ -7,7 +7,7 @@ Command.AddConsole("help",
 	{
 		print("MultIV Life Console Command List");
 		print(
-			"help , say <message>, setmoney <playerid> <amount>\n" + 
+			"help , say <message>, setmoney <database player ids> <amount>\n" + 
 			"pingsql , warn <playerid> , kick <playerid> , ban <playerid>\n" + 
 			"sqltestcon <ip> <user> <password> <database> \n" + 
 			""
@@ -48,10 +48,14 @@ Command.AddConsole("setmoney",
 			local CID = vargv[0].tointeger();
 			local money = vargv[1].tointeger();
 			print(Life_BCName + ": SetPlayerData (ID: " + CID + ") Amount : " + money);
+			local sqlcon = mysql.connect(Life_MySqlHost, Life_MySqlUsername, Life_MySqlPassword, Life_MySqlDatabase);
+			local query = "UPDATE players SET money = '" + money + "' WHERE ids = '" + CID + "'";
+			print(Life_BCName + ": Database Update players <ID:" + CID + ">");
+			SafetySql();
 		}
 		else
 		{
-			print("Syntax: setmoney <playerid> <amount>");
+			print("Syntax: setmoney <players id in database> <amount>");
 		}
 	}
 );
@@ -63,9 +67,17 @@ Command.AddConsole("sqltestcon",
 		{
 			print(Life_BCName + ": MySql Connect to IP : " + vargv[0].tostring() + " | Username : " + vargv[1].tostring() + " | Password : " + vargv[2].tostring() + " | Database : " + vargv[3].tostring() + " |");
 			local sqlcon = mysql.connect(vargv[0].tostring(), vargv[1].tostring(), vargv[2].tostring(), vargv[3].tostring());
-			mysql.close(sqlcon);
-			return;
-		}
+			if (!mysql.ping(sqlcon))
+			{
+				print(Life_BCName + ": MySQL Server connection OK!");
+			} 
+			else 
+			{
+				print(Life_BCName + ": MySQL Server Connection Problem!!!");
+			}
+				mysql.close(sqlcon);
+				return;
+			}
 		else 
 		{
 			print("MySql Test Connection Command Guide");

@@ -7,7 +7,7 @@ local Life_MySQL = mysql.connect(Life_MySqlHost, Life_MySqlUsername, Life_MySqlP
 mysql.debug(true);
 function LifeMySqlPing()
 {
-	if (mysql.ping(Life_MySQL))
+	if (!mysql.ping(Life_MySQL))
 	{
 		print(Life_BCName + ": MySQL Server connection OK!");
 	} 
@@ -20,9 +20,9 @@ LifeMySqlPing();
 
 function SafetySql()
 {
-	local Life_MySQL = mysql.connect(Life_MySqlHost + ":" + Life_MySqlPort, Life_MySqlUsername, Life_MySqlPassword, Life_MySqlDatabase);
+	local Life_MySQL = mysql.connect(Life_MySqlHost, Life_MySqlUsername, Life_MySqlPassword, Life_MySqlDatabase);
 	mysql.close(Life_MySQL);
-	print(Life_BCName + " : Close Connect to MySql Server");
+	print(Life_BCName + " : Close Connect to MySql Server for low resource using");
 };
 
 function LifeCreatePlayerData(pName)
@@ -43,10 +43,12 @@ function LifeGetData(pIDS)
 function LifeSavePlayerData(pIDS, pMoney)
 {
 	local query = "UPDATE players SET money = '" + pMoney + "' WHERE ids = '" + pIDS + "'";
+	/*
 	local handle = mysql.query(Life_MySQL, query);
     mysql.store_result(handle);
     mysql.fetch_row(handle);
     mysql.free_result(handle);
+	*/
 	SafetySql();
 }
 

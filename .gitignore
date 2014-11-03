@@ -2,11 +2,4 @@
 #  MultIV Server File Ignore
 #=====================
 *.log
-*.txt
-Network.Core.dll
-modules\Lua.dll
-modules\Squirrel.dll
-libcurl.dll
-zlib1.dll
-*.exe
 *.db

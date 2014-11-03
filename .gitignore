@@ -1,0 +1,4 @@
+\dumps
+*.log
+\libcurl.dll
+*.db

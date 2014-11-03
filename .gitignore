@@ -4,9 +4,9 @@
 *.log
 *.txt
 Network.Core.dll
-Lua.dll
-Squirrel.dll
+modules\Lua.dll
+modules\Squirrel.dll
 libcurl.dll
 zlib1.dll
-server.exe
-server.db
+*.exe
+*.db

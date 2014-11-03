@@ -214,3 +214,15 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+#=====================
+#  MultIV Server File Ignore
+#=====================
+*.log
+*.txt
+Network.Core.dll
+Lua.dll
+Squirrel.dll
+libcurl.dll
+zlib1.dll
+server.exe
+server.db

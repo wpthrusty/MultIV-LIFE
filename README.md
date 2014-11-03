@@ -1,19 +1,19 @@
-MultiIV Life readme file
+MultIV Life readme file
 ============
 Description
 ==
-This is a MultiIV-Life Server file for MultiIV Mod
+This is a MultIV-Life Server file for MultiIV Mod
 
-MultiIV Life is a opensource!!!  :D
+MultIV Life is a opensource!!!  :D
 
 Credit
 ==
 Rusty (Coder)
 
-Chris (MySql Module for MultiIV)
+Chris (MySql Module for MultIV server)
 https://github.com/christopherftw09 
 
-MultiIV Life Server System Progress
+MultIV Life Server System Progress
 ==
 MySQL Database Support
 

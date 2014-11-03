@@ -5,6 +5,19 @@ ehthumbs.db
 # Folder config file
 Desktop.ini
 
+#==========================
+#  MultIV Server File Ignore
+#==========================
+*.exe
+*.txt
+Network.Core.dll
+server.db
+libcurl.dll
+zlib1.dll
+Lua.dll
+Squirrel.dll
+
+
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 

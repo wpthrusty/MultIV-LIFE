@@ -18,6 +18,10 @@
 			"type": "server"
 		},
 		{
+			"filepath": "server/console.nut",
+			"type": "server"
+		},
+		{
 			"filepath": "server.event.nut",
 			"type": "server"
 		},

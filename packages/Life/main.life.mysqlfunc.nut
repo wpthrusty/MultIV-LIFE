@@ -5,13 +5,13 @@
 print("Start MultiIV Life MySql Function");
 function LifeMySqlPing()
 {
-	local Life_MySQL = mysql.connect(Life_MySqlHost, Life_MySqlUsername, Life_MySqlPassword, Life_MySqlDatabase);
+	local Life_MySQL = mysql.connect(Life_MySqlHost + ":" + Life_MySqlPort, Life_MySqlUsername, Life_MySqlPassword, Life_MySqlDatabase);
 	if (mysql.ping(Life_MySQL))
 	{
-		print("MultiIV Life : MySQL Server connection OK!");
+		print(Life_BCName + ": MySQL Server connection OK!");
 	} else 
 	{
-		print("MultiIV Life : MySQL Server Connection Problem!!!");
+		print(Life_BCName + ": MySQL Server Connection Problem!!!");
 	}
 }
 LifeMySqlPing();

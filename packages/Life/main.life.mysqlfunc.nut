@@ -1,11 +1,12 @@
 //MultiIV Life MySQL Server Function
 //Author : Rusty (Coder)
 //Thanks Chris for MultiIV MySQL Module https://github.com/christopherftw09
+//dofile("main.server.conf.nut");
 
 print("Start MultiIV Life MySql Function");
 function LifeMySqlPing()
 {
-	local Life_MySQL = mysql.connect(::Life_MySqlHost, Life_MySqlUsername, Life_MySqlpassword, Life_MySqlDatabase);
+	local Life_MySQL = mysql.connect(Life_MySqlHost, Life_MySqlUsername, Life_MySqlPassword, Life_MySqlDatabase);
 	if (mysql.ping(Life_MySQL))
 	{
 		print("MultiIV Life : MySQL Server connection OK!");

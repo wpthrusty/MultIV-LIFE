@@ -10,13 +10,12 @@ Command.AddConsole("help",
 			" stopall\n" +
 			" restart <packagename>\n" +
 			" restartall\n" +
-			" say <message>" +
+			" say <message>\n" +
 			" help"
 		);
 	}
 );
 
-// Syntax: list
 Command.AddConsole("help",
 	function (command)
 	{
@@ -25,6 +24,14 @@ Command.AddConsole("help",
 		print("================================");
 	}
 );
+Command.AddConsole("mysqltest",
+	function (command)
+	{
+		print("Testing Life MySql Connection");
+		LifeMySqlPing();
+	}
+);
+// Syntax: list
 Command.AddConsole("list",
 	function (command, ...)
 	{

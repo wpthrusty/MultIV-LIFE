@@ -12,6 +12,7 @@ Desktop.ini
 *.txt
 Network.Core.dll
 server.db
+server.log
 libcurl.dll
 zlib1.dll
 Lua.dll
@@ -39,7 +40,8 @@ $RECYCLE.BIN/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*

@@ -7,8 +7,10 @@ Command.AddConsole("help",
 	{
 		print("MultIV Life Console Command List");
 		print(
-			"help , say <message>, setmoney <playerid> <amoung>\n" + 
-			"pingsql , warn <playerid> , kick <playerid> , ban <playerid>"
+			"help , say <message>, setmoney <playerid> <amount>\n" + 
+			"pingsql , warn <playerid> , kick <playerid> , ban <playerid>\n" + 
+			"sqltestcon <ip> <user> <password> <database> \n" + 
+			""
 		);
 		print("================================");
 	}
@@ -34,6 +36,7 @@ Command.AddConsole("pingsql",
 	function (command, ...)
 	{
 		LifeMySqlPing();
+		SafetySql();
 	}
 );
 
@@ -48,7 +51,26 @@ Command.AddConsole("setmoney",
 		}
 		else
 		{
-			print("Syntax: setmoney <playerid> <amoung>");
+			print("Syntax: setmoney <playerid> <amount>");
+		}
+	}
+);
+
+Command.AddConsole("sqltestcon",
+	function (command, ...)
+	{
+		if (vargv.len() != 0 && vargv.len() != 0 && vargv.len() != 0 && vargv.len() != 0)
+		{
+			print(Life_BCName + ": MySql Connect to IP : " + vargv[0].tostring() + " | Username : " + vargv[1].tostring() + " | Password : " + vargv[2].tostring() + " | Database : " + vargv[3].tostring() + " |");
+			local sqlcon = mysql.connect(vargv[0].tostring(), vargv[1].tostring(), vargv[2].tostring(), vargv[3].tostring());
+			mysql.close(sqlcon);
+			return;
+		}
+		else 
+		{
+			print("MySql Test Connection Command Guide");
+			print("Syntax: sqltestcon <ip> <user> <password> <database>");
+			return;
 		}
 	}
 );

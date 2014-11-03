@@ -10,12 +10,21 @@ Command.AddConsole("help",
 			" stopall\n" +
 			" restart <packagename>\n" +
 			" restartall\n" +
-			" say <message>"
+			" say <message>" +
+			" help"
 		);
 	}
 );
 
 // Syntax: list
+Command.AddConsole("help",
+	function (command)
+	{
+		print("MultIV Life Console Command List");
+		print("");
+		print("================================");
+	}
+);
 Command.AddConsole("list",
 	function (command, ...)
 	{

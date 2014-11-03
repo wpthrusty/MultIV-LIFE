@@ -1,7 +1,6 @@
 //MultiIV Life MySQL Server Function
 //Author : Rusty (Coder)
 //Thanks Chris for MultiIV MySQL Module https://github.com/christopherftw09
-//dofile("main.server.conf.nut");
 
 print("Start MultiIV Life MySql Function");
 function LifeMySqlPing()

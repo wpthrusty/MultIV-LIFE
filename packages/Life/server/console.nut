@@ -6,7 +6,10 @@ Command.AddConsole("help",
 	function (command)
 	{
 		print("MultIV Life Console Command List");
-		print("help , say <message>, setmoney <playerid> <amoung>");
+		print(
+			"help , say <message>, setmoney <playerid> <amoung>\n" + 
+			"pingsql , warn <playerid> , kick <playerid> , ban <playerid>"
+		);
 		print("================================");
 	}
 );
@@ -27,14 +30,20 @@ Command.AddConsole("say",
 		}
 	}
 );
+Command.AddConsole("pingsql",
+	function (command, ...)
+	{
+		LifeMySqlPing();
+	}
+);
 
 Command.AddConsole("setmoney",
-	function (command, command, ...)
+	function (command, ...)
 	{
-		local money = implode(vargv);
-		local CID = implode(vargv);
-		if (money.int() > 0 && CID.int() >= 0)
+		if (vargv.len() > 0 && vargv.len() >= 0)
 		{
+			local CID = vargv[0].tointeger();
+			local money = vargv[1].tointeger();
 			print(Life_BCName + ": SetPlayerData (ID: " + CID + ") Amount : " + money);
 		}
 		else

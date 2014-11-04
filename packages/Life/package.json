@@ -9,6 +9,10 @@
 			"filepath": "../../Cfg/mysql.conf.nut",
 			"type": "server"
 		},
+		{
+			"filepath": "main.life.serverfunc.nut",
+			"type": "server"
+		},
         {
             "filepath": "main.server.nut",
             "type": "server"

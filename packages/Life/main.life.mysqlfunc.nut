@@ -9,11 +9,11 @@ function LifeMySqlPing()
 {
 	if (!mysql.ping(Life_MySQL))
 	{
-		print(Life_BCName + ": MySQL Server connection OK!");
+		print(Life_BCName + " : MySQL Server connection OK!");
 	} 
 	else 
 	{
-		print(Life_BCName + ": MySQL Server Connection Problem!!!");
+		print(Life_BCName + " : MySQL Server Connection Problem!!! <" + mysql.errno(Life_MySQL) + ">");
 	}
 }
 LifeMySqlPing();

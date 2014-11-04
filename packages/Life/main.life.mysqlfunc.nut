@@ -52,9 +52,11 @@ function LifeSavePlayerData(pIDS, pMoney)
 	SafetySql();
 }
 
-function LifeUpdateData(x)
+function LifeUpdateData()
 {
-	
+	LifeMySqlPing();
+	print(Life_BCName + " : Update Life Database");
+	SafetySql();
 }
 
 function LifeDeleteData(pName)

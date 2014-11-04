@@ -10,6 +10,7 @@ Command.AddConsole("help",
 			"help , say <message>, setmoney <database player ids> <amount>\n" + 
 			"pingsql , warn <playerid> , kick <playerid> , ban <playerid>\n" + 
 			"sqltestcon <ip> <user> <password> <database> \n" + 
+			"lifesyncdata" + 
 			""
 		);
 		print("================================");
@@ -100,3 +101,10 @@ function Implode(pieces, glue=" ")
 
 	return output.slice(0, output.len() - glue.len());
 }
+
+Command.AddConsole("lifesyncdata", 
+	function (command, ...)
+	{
+		LifeUpdateData();
+	}
+);

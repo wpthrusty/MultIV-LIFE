@@ -9,6 +9,6 @@ function Life_ABM ()
 	do 
 	{
 		
-	} while (Life_BroadcastMessage)
+	} while (Life_BroadcastMessage.tostring())
 }
 Event.Add(Player, "LfeABM", Life_ABM);

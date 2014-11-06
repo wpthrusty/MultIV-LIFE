@@ -19,9 +19,9 @@ function OnPlayerInGame(player)
 	Player.BroadcastMessage("#00ff00" + player.GetName() + " has joined the game");
 	
 	// Set spawn position and spawn the player
-	player.SetSpawnPosition(-229.635574, 431.741943, 14.742328);
+	player.SetSpawnPosition(Life_SpawnPoint);
 	player.SetSpawnHeading(102.232361);
-	player.Spawn(-229.635574, 431.741943, 14.742328, 102.232361);
+	player.Spawn(Life_SpawnPoint , 102.232361);
 
 	//Show Welcome Message
 	player.SendMessage("#ffffff" + "Hi " + player.GetName() + " welcome to MultiIV Life Server");

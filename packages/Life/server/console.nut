@@ -10,7 +10,7 @@ Command.AddConsole("help",
 			"help , say <message>, setmoney <database player ids> <amount>\n" + 
 			"pingsql , warn <playerid> , kick <playerid> , ban <playerid>\n" + 
 			"sqltestcon <ip> <user> <password> <database> \n" + 
-			"lifesyncdata" + 
+			"lifesyncdata , lifelooptest <Step> " + 
 			""
 		);
 		print("================================");
@@ -106,5 +106,19 @@ Command.AddConsole("lifesyncdata",
 	function (command, ...)
 	{
 		LifeUpdateData();
+	}
+);
+
+Command.AddConsole("lifelooptest",
+	function (command, ...)
+	{
+		if (vargv.len() != 0)
+		{
+			Life_LoopTest(vargv[0].tointeger());
+		}
+		else
+		{
+		
+		}
 	}
 );

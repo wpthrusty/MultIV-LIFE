@@ -13,7 +13,7 @@ function Life_LoopTest(stopstep)
 		//Script Here
 		//print("Loop Test <" + looper + ">");
 		looper++;
-		if (looper >= 1000) 
+		if (looper >= 1200000) 
 		{ 
 			looper = 0;
 			print("Loop Test Reset");
